@@ -1,16 +1,16 @@
 # 💰 FI Money — Inventory Management API
 
-FI Money is a minimal inventory and product management backend service built with *Node.js, **Express, and **PostgreSQL*. It includes a simple frontend to interact with the API and perform basic CRUD operations on products. This project is designed as a backend-focused application with clean code structure, RESTful API conventions, and modular components.
+FI Money is a minimal inventory and product management backend service built with **Node.js**, **Express**, and **PostgreSQL**. It includes a simple frontend to interact with the API and perform basic CRUD operations on products. This project is designed as a backend-focused application with clean code structure, RESTful API conventions, and modular components.
 
 ---
 
-## ⚙ Features
+## ⚙️ Features
 
 - RESTful API for product management
 - PostgreSQL database integration
 - Simple frontend for testing
 - JSON Web Token (JWT) authentication
-- Schema auto-initialization via dbSetup()
+- Schema auto-initialization via `dbSetup()`
 - Modular, maintainable codebase
 
 ---
@@ -25,30 +25,30 @@ Follow these steps to set up and run the project on your local machine.
 
 ### Backend:
 
-bash
+```bash
 cd backend
 npm install
-
+```
 
 ### Frontend:
 
-bash
+```bash
 cd frontend
 npm install
-
+```
 
 ---
 
-## 🗄 Initialize the Database
+## 🗄️ Initialize the Database
 
 To automatically create the necessary tables, run:
 
-bash
+```bash
 cd backend
 node utils/dbSetup.js
+```
 
-
-This will execute the dbSetup() function inside utils/dbSetup.js and set up your PostgreSQL schema.
+This will execute the `dbSetup()` function inside `utils/dbSetup.js` and set up your PostgreSQL schema.
 
 ---
 
@@ -56,19 +56,19 @@ This will execute the dbSetup() function inside utils/dbSetup.js and set up your
 
 ### Start the Backend:
 
-bash
+```bash
 cd backend
-node server.js
-
+npm run dev
+```
 
 ### Start the Frontend:
 
-bash
+```bash
 cd frontend
 npm run dev
+```
 
-
-The backend runs on http://localhost:8080/ and the frontend on http://localhost:5173/ (default Vite port).
+The backend runs on `http://localhost:8080/` and the frontend on `http://localhost:5173/` (default Vite port).
 
 ---
 
@@ -80,45 +80,45 @@ All API responses are in JSON format. Below are the supported routes:
 
 ## 🔐 Authentication Routes
 
-### POST /register
+### POST `/register`
 
 Registers a new user.
 
-*Request Body:*
+**Request Body:**
 
-json
+```json
 {
-  "name": "Abhinav",
+  "name": "Akash",
   "password": "your_password"
 }
-
+```
 
 ---
 
-### POST /login
+### POST `/login`
 
 Logs in a user and returns a JWT.
 
-*Request Body:*
+**Request Body:**
 
-json
+```json
 {
-  "username": "Abhinav",
+  "username": "Akash",
   "password": "your_password"
 }
-
+```
 
 ---
 
 ## 📦 Product Routes
 
-### POST /products
+### POST `/products`
 
 Adds a new product (authentication required).
 
-*Request Body:*
+**Request Body:**
 
-json
+```json
 {
   "name": "Phone",
   "type": "Electronics",
@@ -128,31 +128,31 @@ json
   "quantity": 10,
   "price": 499.99
 }
-
+```
 
 ---
 
-### PUT /products/:product_id/quantity
+### PUT `/products/:product_id/quantity`
 
-Updates the quantity of a product by product_id.
+Updates the quantity of a product by `product_id`.
 
-*Request Body:*
+**Request Body:**
 
-json
+```json
 {
   "quantity": 15
 }
-
+```
 
 ---
 
-### GET /products
+### GET `/products`
 
 Returns a list of all products.
 
-*Response Example:*
+**Response Example:**
 
-json
+```json
 [
   {
     "id": 1,
@@ -175,7 +175,7 @@ json
     "price": 999.99
   }
 ]
-
+```
 
 ---
 
@@ -187,10 +187,10 @@ We used AI assistance to help scaffold and design parts of the frontend UI, as t
 
 ## 🧠 Tech Stack
 
-* *Backend*: Node.js, Express.js, PostgreSQL
-* *Frontend*: Vite + React, JavaScript/HTML
-* *Database*: Neon/PostgreSQL
-* *Auth*: JWT-based stateless authentication
+* **Backend**: Node.js, Express.js, PostgreSQL
+* **Frontend**: Vite + React, JavaScript/HTML
+* **Database**: Neon/PostgreSQL
+* **Auth**: JWT-based stateless authentication
 
 ---
 
