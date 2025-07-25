@@ -58,7 +58,7 @@ This will execute the `dbSetup()` function inside `utils/dbSetup.js` and set up 
 
 ```bash
 cd backend
-npm run dev
+node server.js
 ```
 
 ### Start the Frontend:
@@ -88,7 +88,7 @@ Registers a new user.
 
 ```json
 {
-  "name": "Akash",
+  "name": "Abhinav",
   "password": "your_password"
 }
 ```
@@ -103,7 +103,7 @@ Logs in a user and returns a JWT.
 
 ```json
 {
-  "username": "Akash",
+  "username": "Abhinav",
   "password": "your_password"
 }
 ```
