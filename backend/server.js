@@ -2,11 +2,12 @@ const express = require('express');
 const cors = require('cors');
 
 const app = express();
-
 const authRoutes = require('./routes/auth');
 const productRoutes = require('./routes/products');
 const { deleteAll, init } = require('./utils/db_init');
-
+const dotenv = require("dotenv");
+dotenv.config();
+const PORT = process.env.PORT || 8080;
 app.use(express.json());
 
 app.use((req, res, next) => {
@@ -30,6 +31,6 @@ app.get('/init', (req, res) => {
     res.send("ok");
 });
 
-app.listen(8080, () => {
-    console.log("App Running at: http://localhost:8080");
+app.listen(PORT, () => {
+    console.log(`App Running at: http://localhost:${PORT}`);
 });

@@ -28,7 +28,7 @@ router.post('/login', async (req, res) => {
         return res.status(401).json("Invalid Credentials");
     }
     if ((await checkPassword(password, user.password))) {
-        const token = jwt.sign({ username: user.username }, "FiMoney");
+        const token = jwt.sign({ username: user.username }, process.env.JWT_SECRET, { expiresIn: '6h' });
         return res.status(200).json({ message: "login successful", access_token: token, username: username });
     }
     return res.send("something is wrong");
