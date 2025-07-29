@@ -1,3 +1,4 @@
+# docker run -p 8000:8080 -e PORT=8080 backend
 # 💰 FI Money — Inventory Management API
 
 FI Money is a minimal inventory and product management backend service built with **Node.js**, **Express**, and **PostgreSQL**. It includes a simple frontend to interact with the API and perform basic CRUD operations on products. This project is designed as a backend-focused application with clean code structure, RESTful API conventions, and modular components.
